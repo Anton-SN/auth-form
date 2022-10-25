@@ -1,6 +1,7 @@
 # See https://help.github.com/articles/ignoring-files/ for more about ignoring files.
 
 # stuff
+build
 node_modules
 .yarn
 .idea
