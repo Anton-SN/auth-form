@@ -2,6 +2,8 @@
     width: 300px;
     height: 45px;
     position: relative;
+    opacity: 1;
+    transition: opacity .5s ease;
 }
 
 .input, .error {

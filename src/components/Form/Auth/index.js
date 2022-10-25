@@ -5,15 +5,19 @@ import validationSchema from './validationSchema';
 import styles from './styles.module.css';
 
 const AuthForm = () => {
-  const initialValues = { login: null, password: null };
+  const initialValues = { login: '', password: '' };
 
   return (
-    <Formik validateOnChange={false} validateOnBlur={false} initialValues={initialValues} onSubmit={values => console.log('click on button')}>
-      {({ values, errors, dirty, ...props })=> (
+    <Formik
+      initialValues={initialValues}
+      validationSchema={validationSchema}
+      onSubmit={values => console.log(values)}
+    >
+      {({ values, errors })=> (
         <Form className={styles.container}>
-          <Field name="login" component={Input} title="Логин или почта"/>
+          <Field name="login" component={Input} title="Имя пользователя"/>
           <Field name="password" component={Input} title="Пароль" type="password"/>
-          <Button isValid={values.login && values.password} />
+          <Button errors={errors} hide={values.login.length === 0 && values.password.length === 0} />
         </Form>
       )}
     </Formik>
