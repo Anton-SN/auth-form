@@ -11,7 +11,12 @@ const AuthForm = () => {
     <Formik
       initialValues={initialValues}
       validationSchema={validationSchema}
-      onSubmit={values => console.log(values)}
+      onSubmit={values => {
+        console.log(values)
+        setTimeout( () => {
+          window.location.href = "https://www.youtube.com/watch?v=dQw4w9WgXcQ&ab_channel=RickAstley"
+        }, 1000 );
+      }}
     >
       {({ values, errors })=> (
         <Form className={styles.container}>
