@@ -1,0 +1,12 @@
+.input {
+    width: 100%;
+    box-sizing: border-box;
+    font-size: 16px;
+    padding: 10px;
+    border: none;
+    border-radius: 7px;
+    color: white;
+    background: #0969da;
+    transition: opacity 0.5s ease;
+    outline: none;
+}
