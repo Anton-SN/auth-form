@@ -20,7 +20,7 @@ const AuthForm = () => {
     >
       {({ values, errors })=> (
         <Form className={styles.container}>
-          <Field name="login" component={Input} title="Имя пользователя"/>
+          <Field name="login" component={Input} title="Почта"/>
           <Field name="password" component={Input} title="Пароль" type="password"/>
           <Button errors={errors} hide={values.login.length === 0 && values.password.length === 0} />
         </Form>
